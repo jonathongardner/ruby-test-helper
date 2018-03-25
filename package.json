@@ -1,14 +1,14 @@
 {
-  "name": "ruby-test-text",
-  "main": "./lib/ruby-test-text",
+  "name": "ruby-test-helper",
+  "main": "./lib/ruby-test-helper",
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [
   ],
   "activationCommands": {
-    "atom-workspace": "ruby-test-text:test-as-command"
+    "atom-workspace": "ruby-test-helper:test-as-command"
   },
-  "repository": "https://github.com/atom/ruby-test-text",
+  "repository": "https://github.com/atom/ruby-test-helper",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

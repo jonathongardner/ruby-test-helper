@@ -2,8 +2,8 @@
   "context-menu": {
     "atom-text-editor": [
       {
-        "label": "Command for Test",
-        "command": "ruby-test-text:command"
+        "label": "Test as Command",
+        "command": "ruby-test-helper:test-as-command"
       }
     ]
   },
@@ -12,11 +12,11 @@
       "label": "Packages",
       "submenu": [
         {
-          "label": "ruby-test-text",
+          "label": "ruby-test-helper",
           "submenu": [
             {
-              "label": "Command for Test",
-              "command": "ruby-test-text:test-as-command"
+              "label": "Test as Command",
+              "command": "ruby-test-helper:test-as-command"
             }
           ]
         }

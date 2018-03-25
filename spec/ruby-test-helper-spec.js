@@ -1,44 +1,44 @@
 'use babel';
 
-import RubyTestText from '../lib/ruby-test-text';
+import RubyTestHelper from '../lib/ruby-test-helper';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('RubyTestText', () => {
+describe('RubyTestHelper', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('ruby-test-text');
+    activationPromise = atom.packages.activatePackage('ruby-test-helper');
   });
 
-  describe('when the ruby-test-text:toggle event is triggered', () => {
+  describe('when the ruby-test-helper:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.ruby-test-text')).not.toExist();
+      expect(workspaceElement.querySelector('.ruby-test-helper')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'ruby-test-text:toggle');
+      atom.commands.dispatch(workspaceElement, 'ruby-test-helper:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.ruby-test-text')).toExist();
+        expect(workspaceElement.querySelector('.ruby-test-helper')).toExist();
 
-        let rubyTestTextElement = workspaceElement.querySelector('.ruby-test-text');
-        expect(rubyTestTextElement).toExist();
+        let rubyTestHelperElement = workspaceElement.querySelector('.ruby-test-helper');
+        expect(rubyTestHelperElement).toExist();
 
-        let rubyTestTextPanel = atom.workspace.panelForItem(rubyTestTextElement);
-        expect(rubyTestTextPanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'ruby-test-text:toggle');
-        expect(rubyTestTextPanel.isVisible()).toBe(false);
+        let rubyTestHelperPanel = atom.workspace.panelForItem(rubyTestHelperElement);
+        expect(rubyTestHelperPanel.isVisible()).toBe(true);
+        atom.commands.dispatch(workspaceElement, 'ruby-test-helper:toggle');
+        expect(rubyTestHelperPanel.isVisible()).toBe(false);
       });
     });
 
@@ -51,11 +51,11 @@ describe('RubyTestText', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.ruby-test-text')).not.toExist();
+      expect(workspaceElement.querySelector('.ruby-test-helper')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'ruby-test-text:toggle');
+      atom.commands.dispatch(workspaceElement, 'ruby-test-helper:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,10 +63,10 @@ describe('RubyTestText', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let rubyTestTextElement = workspaceElement.querySelector('.ruby-test-text');
-        expect(rubyTestTextElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'ruby-test-text:toggle');
-        expect(rubyTestTextElement).not.toBeVisible();
+        let rubyTestHelperElement = workspaceElement.querySelector('.ruby-test-helper');
+        expect(rubyTestHelperElement).toBeVisible();
+        atom.commands.dispatch(workspaceElement, 'ruby-test-helper:toggle');
+        expect(rubyTestHelperElement).not.toBeVisible();
       });
     });
   });
