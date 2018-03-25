@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Command for Test",
+        "command": "ruby-test-text:command"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "ruby-test-text",
+          "submenu": [
+            {
+              "label": "Command for Test",
+              "command": "ruby-test-text:test-as-command"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

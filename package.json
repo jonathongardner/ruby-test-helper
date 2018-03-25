@@ -1,0 +1,18 @@
+{
+  "name": "ruby-test-text",
+  "main": "./lib/ruby-test-text",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "ruby-test-text:test-as-command"
+  },
+  "repository": "https://github.com/atom/ruby-test-text",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
