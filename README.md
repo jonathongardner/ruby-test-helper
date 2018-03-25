@@ -1,0 +1,1 @@
+This is an atom package for helping with ruby test. Currently this package has one function, copying the selected test into clipboard. The text in the clipboard will be the command for running the test(s) (i.e. rake test TESTOPTS='-n /some_test/'). If no text is highlighted it will use the current line to try to find the test name.
