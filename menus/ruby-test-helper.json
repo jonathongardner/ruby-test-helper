@@ -2,6 +2,10 @@
   "context-menu": {
     "atom-text-editor": [
       {
+        "label": "Test as Regex Command",
+        "command": "ruby-test-helper:test-as-command-regex"
+      },
+      {
         "label": "Test as Command",
         "command": "ruby-test-helper:test-as-command"
       }
@@ -14,6 +18,10 @@
         {
           "label": "ruby-test-helper",
           "submenu": [
+            {
+              "label": "Test as Regex Command",
+              "command": "ruby-test-helper:test-as-command-regex"
+            },
             {
               "label": "Test as Command",
               "command": "ruby-test-helper:test-as-command"

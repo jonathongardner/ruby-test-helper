@@ -1,7 +1,7 @@
 {
   "name": "ruby-test-helper",
   "main": "./lib/ruby-test-helper",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Copy rails test to Clipboard in command line format.",
   "keywords": [
     "Ruby on Rails", "Ruby minitest"
